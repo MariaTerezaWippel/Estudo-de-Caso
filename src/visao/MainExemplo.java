@@ -34,7 +34,7 @@ public class MainExemplo {
 				break;
 			}
 			case 1: {
-				Pessoa p = new pessoa();
+				Pessoa p = new Pessoa();
 				System.out.println("Nome:");
 				String nome = leitura.nextLine();
 				
