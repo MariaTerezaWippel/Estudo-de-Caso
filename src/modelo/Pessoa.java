@@ -1,6 +1,10 @@
 package modelo;
 
- abstract class  Pessoa {
+
+
+
+ public abstract  class  Pessoa {
+
 
 	private String nome;
 	private String sexo;

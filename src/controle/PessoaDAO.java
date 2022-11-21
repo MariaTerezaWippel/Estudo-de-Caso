@@ -10,20 +10,14 @@ public class PessoaDAO implements IPessoaDAO {
 	private static ArrayList<Pessoa> tabelaPessoas;
 	private static PessoaDAO instancia;
 
-	/**
-	 * Torna o construtor da classe privado Para impedir que a classe seja
-	 * instanciada
-	 */
+	/** * Torna o construtor da classe privado Para impedir que a classe seja
+	 * instanciada */
 	private PessoaDAO() {
 	}
 
-	/**
-	 * Metodo utilizando padrao Singleton impossibilitando que se criem diversos
-	 * objetos em memoria RAM apenas se crie um uma unica vez e se manipule o mesmo
-	 * 
-	 * 
-	 * @return
-	 */
+	/** * Metodo utilizando padrao Singleton impossibilitando que se criem diversos
+	 *  * objetos em memoria RAM apenas se crie um uma unica vez e se manipule o mesmo* 
+	 * @return */
 	public static PessoaDAO getInstancia() {
 
 		if (instancia == null) {
