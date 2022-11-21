@@ -37,10 +37,21 @@ public class MainExemplo {
 				Pessoa p = new Pessoa();
 				System.out.println("Nome:");
 				String nome = leitura.nextLine();
-				// fazer validacao
+				
 				System.out.println("Cpf:");
 				String cpf = leitura.nextLine();
-				// fazer validacao
+				
+				System.out.println("Sexo:");
+				String sexo = leitura.nextLine();
+				
+				System.out.println("Email:");
+				String email = leitura.nextLine();
+				
+				System.out.println("Numero de telefone:");
+				String numeTelefo = leitura.nextLine();
+				
+				
+				
 				p.setNome(nome);
 
 				/**
