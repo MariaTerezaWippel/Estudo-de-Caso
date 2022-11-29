@@ -5,10 +5,11 @@ import java.util.ArrayList;
 import modelo.IPedidoDAO;
 import modelo.Pedido;
 import modelo.Pessoa;
+import modelo.Produto;
 
 public class PedidoDAO implements IPedidoDAO {
 
-	private static ArrayList<Pessoa> tabelaPessoas;
+	private static ArrayList<Pedido> PedidoProduto;
 	private static PedidoDAO instancia;
 
 	
@@ -20,27 +21,27 @@ public class PedidoDAO implements IPedidoDAO {
 
 		if (instancia == null) {
 			instancia = new PedidoDAO();
-			tabelaPessoas = new ArrayList<>();
+			PedidoProduto = new ArrayList<>();
 		}
 
 		return instancia;
 	}
 
 	@Override
-	public boolean inserir(Pedido p) {
+	public boolean inserir1(Pedido p) {
 		if (p != null) {
-			tabelaPessoas.add(p);
+			PedidoProduto.add(p);
 			return true;
 		}
 		return false;
 	}
 
 	@Override
-	public boolean alterar(Pessoa p, long cpf) {
-		for (Pessoa pessoa : tabelaPessoas) {
+	public boolean alterar1(Pedido p, String formaPagamento) {
+		for (Pedido pedido : PedidoProduto) {
 
-			if (pessoa.getCpf() == cpf) {
-				pessoa.setNome(p.getNome());
+			if (pedido.getformaPagamento() == formaPagamento) {
+				pedido.setNome(p.getformaPagamento());
 				return true;
 			}
 		}
@@ -48,10 +49,10 @@ public class PedidoDAO implements IPedidoDAO {
 	}
 
 	@Override
-	public boolean excluir(Pessoa p, long cpf) {
-		for (Pessoa pessoa : tabelaPessoas) {
-			if (pessoa.getCpf() == cpf) {
-				tabelaPessoas.remove(pessoa);
+	public boolean excluir(Pedido p, String nome) {
+		for (Pedido pedido :PedidoProduto) {
+			if (pedido.getNome() == nome) {
+				PedidoProduto.remove(pedido);
 				return true;
 			}
 		}
@@ -60,8 +61,8 @@ public class PedidoDAO implements IPedidoDAO {
 	}
 
 	@Override
-	public ArrayList<Pessoa> listarPessoas() {
-		return tabelaPessoas;
+	public ArrayList<Pedido> listarPedido() {
+		return PedidoProduto;
 	}
 
 	@Override

@@ -12,4 +12,8 @@ public interface IPedidoDAO {
 
 	public ArrayList<Pedido> listarPedidos();
 
+	boolean inserir1(Pedido p);
+
+	boolean alterar1(Pedido p, String nome);
+
 }

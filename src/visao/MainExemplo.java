@@ -49,10 +49,7 @@ public class MainExemplo {
 				
 				p.setNome(nome);
 
-				/**
-				 * Exemplo de validacao
-				 * 
-				 */
+				
 				if (!cpf.isEmpty()) {
 					p.setCpf(Long.valueOf(cpf));
 				} else {
