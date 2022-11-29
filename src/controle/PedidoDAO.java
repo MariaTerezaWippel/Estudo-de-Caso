@@ -2,26 +2,24 @@ package controle;
 
 import java.util.ArrayList;
 
-import modelo.IPessoaDAO;
+import modelo.IPedidoDAO;
+import modelo.Pedido;
 import modelo.Pessoa;
 
-public class PessoaDAO implements IPessoaDAO {
+public class PedidoDAO implements IPedidoDAO {
 
 	private static ArrayList<Pessoa> tabelaPessoas;
-	private static PessoaDAO instancia;
+	private static PedidoDAO instancia;
 
-	/** * Torna o construtor da classe privado Para impedir que a classe seja
-	 * instanciada */
-	private PessoaDAO() {
+	
+	private PedidoDAO() {
 	}
 
-	/** * Metodo utilizando padrao Singleton impossibilitando que se criem diversos
-	 *  * objetos em memoria RAM apenas se crie um uma unica vez e se manipule o mesmo* 
-	 * @return */
-	public static PessoaDAO getInstancia() {
+	
+	public static PedidoDAO getInstancia() {
 
 		if (instancia == null) {
-			instancia = new PessoaDAO();
+			instancia = new PedidoDAO();
 			tabelaPessoas = new ArrayList<>();
 		}
 
@@ -29,7 +27,7 @@ public class PessoaDAO implements IPessoaDAO {
 	}
 
 	@Override
-	public boolean inserir(Pessoa p) {
+	public boolean inserir(Pedido p) {
 		if (p != null) {
 			tabelaPessoas.add(p);
 			return true;
@@ -64,6 +62,30 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public ArrayList<Pessoa> listarPessoas() {
 		return tabelaPessoas;
+	}
+
+	@Override
+	public boolean inserir(Pedido p) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean alterar(Pedido p, String nome) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean excluir(Pedido p, String nome) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ArrayList<Pedido> listarPedidos() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

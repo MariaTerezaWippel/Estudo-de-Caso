@@ -1,27 +1,16 @@
 package modelo;
 
-<<<<<<< HEAD
-abstract class  Pessoa {
-=======
+ public class Pessoa {
 
 
 
- public   class  Pessoa {
-
->>>>>>> main
-
-	private String nome;
-	private String sexo;
-	private String email;
-	private Integer numeTelefo;
 	private Long cpf;
-	 
-
-	public Pessoa(String nome,String sexo, String email,Integer numeTelefo, Long cpf) {
-		this.nome = nome;
-		this.sexo = sexo;
-		this.email = email;
-		this.numeTelefo = numeTelefo;
+	private String cidade;
+	private String estado;
+	
+public Pessoa (Long cpf,String cidade, String Estado) {
+		this.cidade = cidade;
+		this.estado = estado;
 		this.cpf = cpf;
 	}
 
@@ -29,36 +18,20 @@ abstract class  Pessoa {
 
 	}
 
-	public String getNome() {
-		return nome;
+	public String getcidade() {
+		return cidade;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setcidade(String cidade) {
+		this.cidade = cidade;
 	}
 
-	public String getSexo() {
-		return sexo;
+	public String getestado() {
+		return estado;
 	}
 
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Integer getNumeTelefo() {
-		return numeTelefo;
-	}
-
-	public void setNumeTelefo(Integer numeTelefo) {
-		this.numeTelefo = numeTelefo;
+	public void setestado(String estado) {
+		this.estado = estado;
 	}
 
 	public Long getCpf() {
@@ -71,4 +44,5 @@ abstract class  Pessoa {
 
 	
 
-}
+ }
+

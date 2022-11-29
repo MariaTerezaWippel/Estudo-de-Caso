@@ -12,15 +12,10 @@ public class MainExemplo {
 
 		Integer opcaoSelecionada = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-		PessoaDAO bancoPessoa = PessoaDAO.getInstancia();
+		PedidoDAO bancoPessoa = PedidoDAO.getInstancia();
 		while (opcaoSelecionada != 0) {
 
-			/**
-			 * Esta é so uma proposta de menu de sistema.
-			 * 
-			 * Voce nao precisa seguir esta ordem, desde que seu sistema respeite a logica
-			 * de incluir, alterar, listar e excluir de alguma forma.
-			 */
+			
 			System.out.println("- MENU EXEMPLO -");
 			System.out.println("0 SAIR");
 			System.out.println("1 CADASTRAR");
