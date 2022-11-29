@@ -8,4 +8,7 @@ abstract public class Pedido {
 	
 	abstract public String atualizarpagamento();
 	abstract public String atualizarendereco();
+	public abstract String getformaPagamento();
+	public abstract void setNome(String getformaPagamento);
+	public abstract String getNome();
 }

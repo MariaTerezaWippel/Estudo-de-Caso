@@ -7,7 +7,7 @@ import modelo.Pedido;
 import modelo.Pessoa;
 import modelo.Produto;
 
-public class PedidoDAO implements IPedidoDAO {
+public class PedidoDAO {
 
 	private static ArrayList<Pedido> PedidoProduto;
 	private static PedidoDAO instancia;
@@ -27,7 +27,6 @@ public class PedidoDAO implements IPedidoDAO {
 		return instancia;
 	}
 
-	@Override
 	public boolean inserir1(Pedido p) {
 		if (p != null) {
 			PedidoProduto.add(p);
@@ -36,7 +35,6 @@ public class PedidoDAO implements IPedidoDAO {
 		return false;
 	}
 
-	@Override
 	public boolean alterar1(Pedido p, String formaPagamento) {
 		for (Pedido pedido : PedidoProduto) {
 
@@ -48,8 +46,7 @@ public class PedidoDAO implements IPedidoDAO {
 		return false;
 	}
 
-	@Override
-	public boolean excluir(Pedido p, String nome) {
+	public boolean excluir1(Pedido p, String nome) {
 		for (Pedido pedido :PedidoProduto) {
 			if (pedido.getNome() == nome) {
 				PedidoProduto.remove(pedido);
@@ -60,30 +57,25 @@ public class PedidoDAO implements IPedidoDAO {
 		return false;
 	}
 
-	@Override
 	public ArrayList<Pedido> listarPedido() {
 		return PedidoProduto;
 	}
 
-	@Override
 	public boolean inserir(Pedido p) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public boolean alterar(Pedido p, String nome) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public boolean excluir(Pedido p, String nome) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public ArrayList<Pedido> listarPedidos() {
 		// TODO Auto-generated method stub
 		return null;
