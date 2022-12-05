@@ -22,7 +22,7 @@ public  class EmpresaDAO implements IEmpresaDAO {
 
 	@Override
 	public boolean inserir(Empresa empresa) {
-		if (empresa != null) {
+		if (empresa != empresa) {
 			empresas.add(empresa);
 			return true;
 		}
@@ -67,6 +67,11 @@ public  class EmpresaDAO implements IEmpresaDAO {
 	public void cadastrarMalhas() {
 		
 	}
+
+	public void inserir(Malha ma11) {
+		
+	}
+
 
 	
 

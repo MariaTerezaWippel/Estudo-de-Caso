@@ -1,11 +1,14 @@
 package modelo;
 
+import controle.MalhaDAO;
+
 public class Malha extends Produto {
 
 	private String codMalha;
     private String estiloMalha;
     private String corMalha;
     private String tiposfiosMalha;
+    
     
 	public String getCodMalha() {
 		return codMalha;
@@ -33,6 +36,9 @@ public class Malha extends Produto {
 	}
 	public void remove(Malha malhaExcluir) {
 		
+	}
+	public static MalhaDAO getInstanciamalha() {
+		return null;
 	}
     
 }

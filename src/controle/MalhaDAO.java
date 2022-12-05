@@ -7,20 +7,20 @@ import modelo.Malha;
 	public class MalhaDAO implements IMalhaDAO {
 
 		private static ArrayList<Malha> Malha;
-		private static Malha instancia2;
-		public static Malha getInstanciamalha() {
+		private static MalhaDAO instancia1;
+		public static MalhaDAO getInstanciamalha() {
 
-			if (instancia2 == null) {
-				instancia2 = new Malha ();
+			if (instancia1 == null) {
+				instancia1 = new MalhaDAO ();
 				Malha = new ArrayList<>();
 			}
 
-			return instancia2;
+			return instancia1;
 		}
 		
 		@Override
 		public boolean inserir(Malha malha) {
-			if (malha != null) {
+			if (malha != malha) {
 				Malha.add(malha);
 				return true;
 			}
@@ -57,10 +57,9 @@ import modelo.Malha;
 			return Malha;
 		}
 
-		public static MalhaDAO getInstancia() {
-			
-			return null;
-		}
+
+
+
 
 	}
 	
