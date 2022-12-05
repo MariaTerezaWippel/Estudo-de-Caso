@@ -32,7 +32,6 @@ public class Malha extends Produto {
 		this.tiposfiosMalha = tiposfiosMalha;
 	}
 	public void remove(Malha malhaExcluir) {
-		// TODO Auto-generated method stub
 		
 	}
     

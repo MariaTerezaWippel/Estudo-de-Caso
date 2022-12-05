@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import modelo.Empresa;
 import modelo.IEmpresaDAO;
+import modelo.Malha;
 
-public class EmpresaDAO implements IEmpresaDAO {
+public  class EmpresaDAO implements IEmpresaDAO {
 
 	private static ArrayList<Empresa> empresas;
 	private static EmpresaDAO instancia;
-
 	public static EmpresaDAO getInstancia() {
 
 		if (instancia == null) {
@@ -21,21 +21,21 @@ public class EmpresaDAO implements IEmpresaDAO {
 	}
 
 	@Override
-	public boolean inserir(Empresa malha) {
-		if (malha != null) {
-			empresas.add(malha);
+	public boolean inserir(Empresa empresa) {
+		if (empresa != null) {
+			empresas.add(empresa);
 			return true;
 		}
 		return false;
 	}
 
 	@Override
-	public boolean alterar(Empresa empresaAlterar, Long cnpj) {
+	public boolean alterar(Empresa empresaAlterar, String cnpj) {
 		for (Empresa empresa : empresas) {
 
 			if (empresa.getCnpj() == cnpj) {
-				empresa.setNome(empresaAlterar.getNome());
-// terminar TODO botar sets
+				empresa.setNomeEmpresa(empresaAlterar.getNomeEmpresa());
+				empresa.setEmpresas(empresas);
 				return true;
 			}
 		}
@@ -43,10 +43,10 @@ public class EmpresaDAO implements IEmpresaDAO {
 	}
 
 	@Override
-	public boolean deletar(Empresa malhaExcluir, Long cnpj) {
-		for (Empresa malha : empresas) {
-			if (malha.getCnpj() == cnpj) {
-				empresas.remove(malhaExcluir);
+	public boolean deletar(Empresa empresaExcluir, String cnpj) {
+		for (Empresa empresa : empresas) {
+			if (empresa.getCnpj() == cnpj) {
+				empresas.remove(empresaExcluir);
 				return true;
 			}
 		}
@@ -59,4 +59,16 @@ public class EmpresaDAO implements IEmpresaDAO {
 		return empresas;
 	}
 
+
+	public void listarMalhas() {
+		
+	}
+
+	public void cadastrarMalhas() {
+		
+	}
+
+	
+
+	
 }
