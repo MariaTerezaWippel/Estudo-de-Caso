@@ -4,32 +4,39 @@ import java.util.ArrayList;
 
 public class Empresa {
 
-	private Long cnpj;
-	private String nome;
-	private ArrayList<Empresa> malhas;
-
-	public Long getCnpj() {
+	private String cnpj;
+	private String nomeEmpresa;
+	private Integer telefonaEmpresa;
+	
+	private ArrayList<Empresa> empresas;
+	
+	public String getCnpj() {
 		return cnpj;
 	}
-
-	public void setCnpj(Long cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-
-	public String getNome() {
-		return nome;
+	public String getNomeEmpresa() {
+		return nomeEmpresa;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeEmpresa(String nomeEmpresa) {
+		this.nomeEmpresa = nomeEmpresa;
 	}
-
+	public Integer getTelefonaEmpresa() {
+		return telefonaEmpresa;
+	}
+	public void setTelefonaEmpresa(Integer telefonaEmpresa) {
+		this.telefonaEmpresa = telefonaEmpresa;
+	}
 	public ArrayList<Empresa> getEmpresas() {
-		return malhas;
+		return empresas;
+	}
+	public void setEmpresas(ArrayList<Empresa> empresas) {
+		this.empresas = empresas;
 	}
 
-	public void setMalhas(ArrayList<Empresa> empresas) {
-		this.malhas = malhas;
-	}
+	
+}
+
 
 }
